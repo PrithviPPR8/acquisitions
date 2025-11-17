@@ -1,0 +1,2 @@
+{"level":"info","message":"Hello from Acquisition!","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [17/Nov/2025:14:32:29 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0\"","service":"acquisitions-api"}
