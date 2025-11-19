@@ -59,3 +59,8 @@
 {"level":"info","message":"User prithvi@coder.com created successfully","service":"acquisitions-api"}
 {"level":"info","message":"User registered successfully: prithvi@coder.com","service":"acquisitions-api"}
 {"level":"info","message":"::1 - - [19/Nov/2025:08:36:03 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 104 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User prithvi@coder.com authenticated successfully","service":"acquisitions-api"}
+{"level":"info","message":"User logged in successfully: prithvi@coder.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [19/Nov/2025:13:17:46 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 103 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User signed out successfully","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [19/Nov/2025:13:18:23 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 29 \"-\" \"HTTPie\"","service":"acquisitions-api"}
