@@ -201,3 +201,20 @@
 {"level":"info","message":"::1 - - [21/Nov/2025:07:47:05 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-21T07:47:05.675Z"}
 {"level":"info","message":"::ffff:172.18.0.1 - - [21/Nov/2025:07:47:06 +0000] \"GET /api/users HTTP/1.1\" 401 72 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-11-21T07:47:06.638Z"}
 {"level":"info","message":"::1 - - [21/Nov/2025:07:47:36 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-21T07:47:36.729Z"}
+{"level":"info","message":"::ffff:172.18.0.1 - - [21/Nov/2025:07:47:58 +0000] \"GET /api/users HTTP/1.1\" 401 72 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-11-21T07:47:58.748Z"}
+{"level":"info","message":"::1 - - [21/Nov/2025:07:48:09 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-21T07:48:09.504Z"}
+{"level":"info","message":"User prithvi@coder.com authenticated successfully","service":"acquisitions-api","timestamp":"2025-11-21T07:48:28.071Z"}
+{"level":"info","message":"User signed in successfully: prithvi@coder.com","service":"acquisitions-api","timestamp":"2025-11-21T07:48:28.123Z"}
+{"level":"info","message":"::ffff:172.18.0.1 - - [21/Nov/2025:07:48:28 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 116 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-11-21T07:48:28.127Z"}
+{"level":"info","message":"::1 - - [21/Nov/2025:07:48:41 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-21T07:48:41.438Z"}
+{"level":"info","message":"::1 - - [21/Nov/2025:07:49:12 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-21T07:49:12.809Z"}
+{"level":"info","message":"User authenticated: prithvi@coder.com (user)","service":"acquisitions-api","timestamp":"2025-11-21T07:49:17.545Z"}
+{"level":"info","message":"Getting users...","service":"acquisitions-api","timestamp":"2025-11-21T07:49:17.545Z"}
+{"level":"info","message":"::ffff:172.18.0.1 - - [21/Nov/2025:07:49:17 +0000] \"GET /api/users HTTP/1.1\" 200 359 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2025-11-21T07:49:17.870Z"}
+{"level":"info","message":"::1 - - [21/Nov/2025:07:49:44 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-21T07:49:44.104Z"}
+{"level":"info","message":"::1 - - [21/Nov/2025:07:50:15 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-21T07:50:15.813Z"}
+{"level":"info","message":"::1 - - [21/Nov/2025:07:50:49 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-21T07:50:49.222Z"}
+{"level":"info","message":"::1 - - [21/Nov/2025:07:51:24 +0000] \"GET /health HTTP/1.1\" - - \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-21T07:51:24.371Z"}
+{"level":"info","message":"::1 - - [21/Nov/2025:07:51:56 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-21T07:51:56.750Z"}
+{"level":"info","message":"::1 - - [21/Nov/2025:07:52:32 +0000] \"GET /health HTTP/1.1\" - - \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-21T07:52:32.342Z"}
+{"level":"info","message":"::1 - - [21/Nov/2025:07:53:04 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-21T07:53:04.052Z"}
