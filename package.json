@@ -27,7 +27,7 @@
     "db:studio": "drizzle-kit studio",
     "dev:docker": "sh ./scripts/dev.sh",
     "prod:docker": "sh ./scripts/prod.sh",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+    "test": "set NODE_OPTIONS=--experimental-vm-modules && jest"
   },
   "keywords": [],
   "author": "",
