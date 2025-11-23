@@ -558,3 +558,5 @@
 {"level":"info","message":"::ffff:127.0.0.1 - - [23/Nov/2025:08:42:33 +0000] \"GET /nonexsistent HTTP/1.1\" 400 27 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-23T08:42:33.506Z"}
 {"level":"info","message":"::1 - - [23/Nov/2025:08:43:05 +0000] \"GET /health HTTP/1.1\" 200 78 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-23T08:43:05.313Z"}
 {"level":"info","message":"::1 - - [23/Nov/2025:08:43:37 +0000] \"GET /health HTTP/1.1\" 200 78 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-23T08:43:37.282Z"}
+{"level":"info","message":"::1 - - [23/Nov/2025:08:44:14 +0000] \"GET /health HTTP/1.1\" - - \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-23T08:44:14.754Z"}
+{"level":"info","message":"::1 - - [23/Nov/2025:08:44:47 +0000] \"GET /health HTTP/1.1\" 200 78 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2025-11-23T08:44:47.081Z"}
