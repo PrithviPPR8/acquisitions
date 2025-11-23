@@ -7,6 +7,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 Node.js/Express API for user acquisition/authentication backed by PostgreSQL via Neon and Drizzle ORM. The app exposes health and API endpoints, handles signup/signin/signout flows, and secures traffic with Arcjet-based security middleware.
 
 Key technologies:
+
 - Node 18+, ES modules (`"type": "module"`)
 - Express 5
 - PostgreSQL via Neon (serverless) + Drizzle ORM
@@ -19,6 +20,7 @@ Key technologies:
 ### Using Node directly
 
 From the repo root:
+
 - Install dependencies: `npm ci`
 - Run the app in dev mode with file watching: `npm run dev`
 - Run the app in production mode (no watch): `npm start`
@@ -43,6 +45,7 @@ Dev compose expects `.env.development`; prod compose expects `.env.production`. 
 ## Linting and formatting
 
 From the repo root:
+
 - Lint entire project: `npm run lint`
 - Lint and automatically fix issues: `npm run lint:fix`
 - Format code with Prettier: `npm run format`
@@ -69,6 +72,7 @@ PostgreSQL access is via Neon (serverless) and Drizzle ORM.
 - Open Drizzle Studio (web UI): `npm run db:studio`
 
 `src/config/database.js` configures Neon differently for development vs other environments:
+
 - In `NODE_ENV=development`, it routes to the Neon Local proxy (`neon-local` service in `docker-compose.dev.yml`).
 - Otherwise it uses the `DATABASE_URL` directly (expected to point at a Neon/Postgres instance).
 
@@ -81,6 +85,7 @@ PostgreSQL access is via Neon (serverless) and Drizzle ORM.
 - `src/app.js`: constructs the Express app, wires global middleware, and registers routes.
 
 Important routes:
+
 - `GET /`: simple text response to verify the app is up.
 - `GET /health`: JSON healthcheck used by Docker health checks.
 - `GET /api`: simple JSON to indicate the API is running.
@@ -90,6 +95,7 @@ Important routes:
 ### Routing, controllers, and services
 
 Layering is fairly standard:
+
 - Routes (`src/routes/*.routes.js`) attach HTTP paths to controller functions.
   - `auth.routes.js` → `signup`, `signin`, `signout` in `auth.controller.js`.
   - `users.routes.js` → `fetchAllUsers` in `users.controller.js` (plus placeholder handlers for single-user routes).
@@ -108,6 +114,7 @@ Layering is fairly standard:
 - Services import `db` and `users` to perform typed queries (e.g., `db.select().from(users).where(...)`).
 
 When changing schema:
+
 - Update `src/models/user.model.js`.
 - Regenerate migrations (`npm run db:generate`) and then apply them (`npm run db:migrate`).
 
@@ -121,6 +128,7 @@ When changing schema:
 ### Security and rate limiting
 
 Security is primarily handled by an Arcjet-based middleware and HTTP headers middleware:
+
 - `src/app.js` enables core security middleware:
   - `helmet()` for secure HTTP headers.
   - `cors()` with default configuration.

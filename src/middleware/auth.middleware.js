@@ -1,5 +1,5 @@
-import logger from '#config/logger.js';
-import { jwttoken } from '#utils/jwt.js';
+import logger from "#config/logger.js";
+import { jwttoken } from "#utils/jwt.js";
 
 export const authenticateToken = (req, res, next) => {
   try {
@@ -7,8 +7,8 @@ export const authenticateToken = (req, res, next) => {
 
     if (!token) {
       return res.status(401).json({
-        error: 'Authentication required',
-        message: 'No access token provided',
+        error: "Authentication required",
+        message: "No access token provided",
       });
     }
 
@@ -18,18 +18,18 @@ export const authenticateToken = (req, res, next) => {
     logger.info(`User authenticated: ${decoded.email} (${decoded.role})`);
     next();
   } catch (e) {
-    logger.error('Authentication error:', e);
+    logger.error("Authentication error:", e);
 
-    if (e.message === 'Failed to authenticate token') {
+    if (e.message === "Failed to authenticate token") {
       return res.status(401).json({
-        error: 'Authentication failed',
-        message: 'Invalid or expired token',
+        error: "Authentication failed",
+        message: "Invalid or expired token",
       });
     }
 
     return res.status(500).json({
-      error: 'Internal server error',
-      message: 'Error during authentication',
+      error: "Internal server error",
+      message: "Error during authentication",
     });
   }
 };
@@ -39,27 +39,27 @@ export const requireRole = allowedRoles => {
     try {
       if (!req.user) {
         return res.status(401).json({
-          error: 'Authentication required',
-          message: 'User not authenticated',
+          error: "Authentication required",
+          message: "User not authenticated",
         });
       }
 
       if (!allowedRoles.includes(req.user.role)) {
         logger.warn(
-          `Access denied for user ${req.user.email} with role ${req.user.role}. Required: ${allowedRoles.join(', ')}`
+          `Access denied for user ${req.user.email} with role ${req.user.role}. Required: ${allowedRoles.join(", ")}`
         );
         return res.status(403).json({
-          error: 'Access denied',
-          message: 'Insufficient permissions',
+          error: "Access denied",
+          message: "Insufficient permissions",
         });
       }
 
       next();
     } catch (e) {
-      logger.error('Role verification error:', e);
+      logger.error("Role verification error:", e);
       return res.status(500).json({
-        error: 'Internal server error',
-        message: 'Error during role verification',
+        error: "Internal server error",
+        message: "Error during role verification",
       });
     }
   };
